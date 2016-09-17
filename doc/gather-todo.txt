@@ -1,0 +1,34 @@
+INTRODUCTION *gather-todo.txt* *GatherTodo*
+
+This plugin is a tool for dealing with multiple todo.txt files in a directory
+tree. The |GatherTodo-command| recursively searches for todo.txt files and
+merges the result into a new scratch buffer.  Furthermore it adds an
+additional context tag to each line, to indicate the path, where this
+particular todo item was found.  You can also use native vim commands for
+filtering, since the result is a temporary scratch buffer.
+See |GatherTodo-filtering|
+
+
+USAGE *GatherTodo-command*
+>
+  GatherTodo [dir_names]
+<
+Will recursively search for todo.txt files in the tree(s) with [dir_names]
+root(s). If no argument is given, the window's cwd will be used.  In the
+resulting scratch buffer, a context with the path of the original todo.txt
+file is added to each line.  Thus, you can jump to it with |gf|.
+
+
+FILTERING *GatherTodo-filtering*
+
+Since the result of |GatherTodo-command| is written in a new scratch buffer,
+you can happily filter them with standard vim tools:
+
+Show only todo items with `@interesting` context:
+>
+  v/@interesting/d
+<
+Don't show todo items from `+boring` project:
+>
+  g/+boring/d
+<
