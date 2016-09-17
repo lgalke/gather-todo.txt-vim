@@ -40,17 +40,17 @@ you can use the whole power of vim to do filtering on certain projects/tags:
 
 Show only todo items with `@interesting` context:
 
-```v/@interesting/d```
+    v/@interesting/d
 
 Don't show todo items from `+boring` project:
 
-```g/+boring/d```
+    g/+boring/d
 
 ## Installation
 
 ### Using pathogen
 
-```cd ~/.vim/bundle && git clone http://github.com/lgalke/gather-todo.txt-vim.git```
+```cd ~/.vim/bundle && git clone https://github.com/lgalke/gather-todo.txt-vim.git```
 
 ### Using Vundle
 
