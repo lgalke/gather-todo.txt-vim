@@ -1,0 +1,2 @@
+(A) 2016-09-17 Add a vim help file +gather-todo.txt @documentation
+(B) 2016-09-17 Think about filtering on the fly or with a separate function +gather-todo.txt @extension
